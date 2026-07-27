@@ -56,6 +56,12 @@ export function Checkout() {
       message: form.message.trim() || null,
     };
 
+    if (!supabase) {
+      setStatus('error');
+      setErrorMsg('Order service is not configured. Please message us on Telegram to place your order.');
+      return;
+    }
+
     const { error } = await supabase.from('order_inquiries').insert(payload);
 
     if (error) {
