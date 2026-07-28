@@ -75,17 +75,6 @@ interface SaffronType {
 
 const SAFFRON_TYPES: SaffronType[] = [
   {
-    key: 'negin',
-    label: 'Negin Saffron',
-    character: 'Long-Cut All-Red',
-    grade: 'Negin — Grade A',
-    accent: 'crimson',
-    typeLead:
-      'Negin is the crown jewel of Persian saffron — extra-long, extra-thick all-red threads with no yellow style, drawn only from the choicest blooms. Its rare length and vivid crimson make it the most prized cut among connoisseurs, with coloring and aroma that surpass even Sargol. Lab-verified to exceed ISO 3632 Grade A.',
-    typeFeatures: ['Extra-long all-red', 'Crocin 270+', 'ISO 3632 Grade A'],
-    prices: { 5: 79, 10: 149, 50: 650, 100: 1190 },
-  },
-  {
     key: 'sargol',
     label: 'Sargol Saffron',
     character: 'All-Red Grade A',
@@ -95,6 +84,17 @@ const SAFFRON_TYPES: SaffronType[] = [
       'Sargol is the finest cut of Persian saffron — pure all-red stigma tips, hand-separated to exclude every trace of the yellow style. Harvested at dawn in Khorasan, its deep crimson threads deliver extraordinary coloring strength, intense aroma, and a flavor that elevates risotto, tea, and desserts. Lab-verified to exceed ISO 3632 Grade A.',
     typeFeatures: ['All-red stigma', 'Crocin 250+', 'ISO 3632 Grade A'],
     prices: { 5: 59, 10: 109, 50: 480, 100: 890 },
+  },
+  {
+    key: 'negin',
+    label: 'Negin Saffron',
+    character: 'Long-Cut All-Red',
+    grade: 'Negin — Grade A',
+    accent: 'crimson',
+    typeLead:
+      'Negin is the crown jewel of Persian saffron — extra-long, extra-thick all-red threads with no yellow style, drawn only from the choicest blooms. Its rare length and vivid crimson make it the most prized cut among connoisseurs, with coloring and aroma that surpass even Sargol. Lab-verified to exceed ISO 3632 Grade A.',
+    typeFeatures: ['Extra-long all-red', 'Crocin 270+', 'ISO 3632 Grade A'],
+    prices: { 5: 79, 10: 149, 50: 650, 100: 1190 },
   },
   {
     key: 'pushal',
