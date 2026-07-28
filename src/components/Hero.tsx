@@ -25,7 +25,7 @@ export function Hero() {
       {/* Large decorative saffron mark */}
       <SaffronBloom className="pointer-events-none absolute -right-24 top-1/2 hidden h-[640px] w-[640px] -translate-y-1/2 opacity-25 lg:block" />
 
-      <div className="relative mx-auto flex min-h-screen max-w-8xl flex-col items-center justify-center px-5 pt-32 pb-20 text-center sm:px-8">
+      <div className="relative mx-auto flex min-h-screen max-w-8xl flex-col items-center justify-center px-5 pt-24 pb-14 text-center sm:px-8">
         <div className="animate-fade-up flex items-center gap-2 rounded-full border border-saffron-500/30 bg-espresso-800/40 px-5 py-2 backdrop-blur">
           <Sparkles className="h-4 w-4 text-saffron-400" />
           <span className="text-xs uppercase tracking-[0.3em] text-cream-200">
@@ -33,18 +33,18 @@ export function Hero() {
           </span>
         </div>
 
-        <h1 className="animate-fade-up mt-8 max-w-4xl font-serif text-5xl font-semibold leading-[1.05] text-cream-50 text-balance [animation-delay:0.1s] sm:text-7xl lg:text-8xl">
+        <h1 className="animate-fade-up mt-5 max-w-4xl font-serif text-5xl font-semibold leading-[1.05] text-cream-50 text-balance [animation-delay:0.1s] sm:text-7xl lg:text-8xl">
           The Treasures of
           <span className="block text-gold-gradient">Ancient Persia</span>
         </h1>
 
-        <p className="animate-fade-up mt-7 max-w-2xl text-lg leading-relaxed text-cream-300 text-balance [animation-delay:0.2s] sm:text-xl">
+        <p className="animate-fade-up mt-5 max-w-2xl text-lg leading-relaxed text-cream-300 text-balance [animation-delay:0.2s] sm:text-xl">
           Premium Iranian saffron, hand-harvested from the Khorasan plateau. Hand-knotted
           Persian rugs woven by master artisans over months of devotion. Delivered worldwide,
           paid in USDT.
         </p>
 
-        <div className="animate-fade-up mt-10 flex flex-col items-center gap-4 [animation-delay:0.3s] sm:flex-row">
+        <div className="animate-fade-up mt-7 flex flex-col items-center gap-3 [animation-delay:0.3s] sm:flex-row">
           <a
             href="#saffron"
             className="group rounded-full bg-gold-gradient px-8 py-4 font-semibold text-espresso-950 shadow-gold transition-transform hover:scale-105 active:scale-100"
@@ -61,9 +61,9 @@ export function Hero() {
         </div>
 
         {/* Stats strip */}
-        <div className="animate-fade-up mt-20 grid w-full max-w-3xl grid-cols-2 gap-px overflow-hidden rounded-2xl border border-saffron-500/15 bg-saffron-500/10 sm:grid-cols-4 [animation-delay:0.4s]">
+        <div className="animate-fade-up mt-14 grid w-full max-w-3xl grid-cols-2 gap-px overflow-hidden rounded-2xl border border-saffron-500/15 bg-saffron-500/10 sm:grid-cols-4 [animation-delay:0.4s]">
           {STATS.map((s) => (
-            <div key={s.label} className="bg-espresso-900/80 px-4 py-6 text-center backdrop-blur">
+            <div key={s.label} className="bg-espresso-900/80 px-4 py-4 text-center backdrop-blur">
               <p className="font-serif text-3xl text-saffron-300 sm:text-4xl">{s.value}</p>
               <p className="mt-1 text-[11px] uppercase tracking-widest text-cream-400">{s.label}</p>
             </div>

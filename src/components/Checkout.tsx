@@ -76,7 +76,7 @@ export function Checkout() {
   };
 
   return (
-    <section id="checkout" ref={ref} className="relative overflow-hidden py-24 sm:py-32">
+    <section id="checkout" ref={ref} className="relative overflow-hidden py-16 sm:py-22">
       <div className="absolute inset-0 bg-gradient-to-b from-espresso-900 to-espresso-950" />
       <div className="persian-pattern-dense absolute inset-0 opacity-25" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_40%,rgba(232,168,56,0.12),transparent_60%)]" />
@@ -84,29 +84,29 @@ export function Checkout() {
       <div className="relative mx-auto max-w-8xl px-5 sm:px-8">
         <div className={`reveal ${isVisible ? 'is-visible' : ''} mx-auto max-w-3xl text-center`}>
           <p className="text-xs uppercase tracking-[0.32em] text-saffron-400">Checkout &amp; Orders</p>
-          <h2 className="mt-4 font-serif text-4xl leading-tight text-cream-50 sm:text-6xl">
+          <h2 className="mt-3 font-serif text-4xl leading-tight text-cream-50 sm:text-6xl">
             Pay with <span className="text-gold-gradient">USDT</span>
           </h2>
-          <p className="mt-6 text-lg leading-relaxed text-cream-300 text-balance">
+          <p className="mt-4 text-lg leading-relaxed text-cream-300 text-balance">
             Place your order inquiry below. We accept USDT (TRC-20 &amp; ERC-20) for a fast,
             borderless payment. Once you submit, our team confirms availability and shares the
             final wallet address for your transfer.
           </p>
         </div>
 
-        <div className="mt-16 grid gap-7 lg:grid-cols-[1fr_1.1fr]">
+        <div className="mt-11 grid gap-5 lg:grid-cols-[1fr_1.1fr]">
           {/* Order summary */}
           <div className={`reveal ${isVisible ? 'is-visible' : ''} flex flex-col gap-6`}>
-            <div className="rounded-3xl border border-saffron-500/20 bg-espresso-800/50 p-6 backdrop-blur">
+            <div className="rounded-3xl border border-saffron-500/20 bg-espresso-800/50 p-4 backdrop-blur">
               <h3 className="font-serif text-2xl text-cream-50">Order Summary</h3>
               {items.length === 0 ? (
-                <p className="mt-4 text-sm text-cream-400">
+                <p className="mt-3 text-sm text-cream-400">
                   Your cart is empty. Add saffron or a rug from the collection above to begin.
                 </p>
               ) : (
-                <ul className="mt-4 divide-y divide-saffron-500/10">
+                <ul className="mt-3 divide-y divide-saffron-500/10">
                   {items.map((i) => (
-                    <li key={i.product.id} className="flex items-center justify-between py-3">
+                    <li key={i.product.id} className="flex items-center justify-between py-2">
                       <div className="pr-3">
                         <p className="font-serif text-lg text-cream-50">{i.product.name}</p>
                         <p className="text-xs text-cream-400">
@@ -121,7 +121,7 @@ export function Checkout() {
                 </ul>
               )}
               {items.length > 0 && (
-                <div className="mt-4 flex items-center justify-between border-t border-saffron-500/15 pt-4">
+                <div className="mt-3 flex items-center justify-between border-t border-saffron-500/15 pt-3">
                   <span className="text-sm uppercase tracking-widest text-cream-400">Total</span>
                   <span className="font-serif text-4xl text-gold-gradient">
                     ${totalUsd.toLocaleString()}
@@ -131,7 +131,7 @@ export function Checkout() {
             </div>
 
             {/* USDT payment info */}
-            <div className="rounded-3xl border border-saffron-500/20 bg-espresso-800/50 p-6 backdrop-blur">
+            <div className="rounded-3xl border border-saffron-500/20 bg-espresso-800/50 p-4 backdrop-blur">
               <div className="flex items-center gap-3">
                 <span className="grid h-10 w-10 place-items-center rounded-full border border-saffron-500/30 text-saffron-300">
                   <Lock className="h-5 w-5" strokeWidth={1.5} />
@@ -141,13 +141,13 @@ export function Checkout() {
                   <p className="text-xs text-cream-400">Tether — TRC-20 &amp; ERC-20 networks</p>
                 </div>
               </div>
-              <p className="mt-4 text-sm leading-relaxed text-cream-300">
+              <p className="mt-3 text-sm leading-relaxed text-cream-300">
                 Equivalent amount: <span className="font-semibold text-saffron-300">{usdtAmount} USDT</span>
                 {' '}(≈ ${usdtAmount} USD). Send only USDT to the networks below. Confirm the exact
                 address with us on Telegram before transferring.
               </p>
 
-              <div className="mt-5 space-y-3">
+              <div className="mt-3.5 space-y-2">
                 {Object.entries(USDT_WALLETS).map(([network, addr]) => (
                   <div
                     key={network}
@@ -174,7 +174,7 @@ export function Checkout() {
                   </div>
                 ))}
               </div>
-              <p className="mt-4 flex items-start gap-2 text-xs leading-relaxed text-cream-400">
+              <p className="mt-3 flex items-start gap-2 text-xs leading-relaxed text-cream-400">
                 <AlertCircle className="mt-0.5 h-3.5 w-3.5 shrink-0 text-saffron-400" />
                 Always verify the wallet address with our team before sending funds. Addresses
                 shown are examples — the final address is provided after your inquiry is confirmed.
@@ -186,7 +186,7 @@ export function Checkout() {
           <div className={`reveal ${isVisible ? 'is-visible' : ''} [transition-delay:120ms]`}>
             <form
               onSubmit={handleSubmit}
-              className="rounded-3xl border border-saffron-500/20 bg-espresso-800/50 p-6 backdrop-blur sm:p-8"
+              className="rounded-3xl border border-saffron-500/20 bg-espresso-800/50 p-4 backdrop-blur sm:p-5"
             >
               <h3 className="font-serif text-2xl text-cream-50">Place Your Inquiry</h3>
               <p className="mt-1 text-sm text-cream-400">
@@ -195,7 +195,7 @@ export function Checkout() {
                   : 'Add items to your cart first, then submit your details.'}
               </p>
 
-              <div className="mt-6 space-y-5">
+              <div className="mt-4 space-y-3.5">
                 <Field
                   label="Full Name"
                   required
@@ -232,14 +232,14 @@ export function Checkout() {
               </div>
 
               {status === 'error' && (
-                <p className="mt-4 flex items-start gap-2 rounded-xl border border-crimson-500/30 bg-crimson-700/15 px-4 py-3 text-sm text-crimson-400">
+                <p className="mt-3 flex items-start gap-2 rounded-xl border border-crimson-500/30 bg-crimson-700/15 px-4 py-2 text-sm text-crimson-400">
                   <AlertCircle className="mt-0.5 h-4 w-4 shrink-0" />
                   {errorMsg}
                 </p>
               )}
 
               {status === 'success' ? (
-                <div className="mt-6 rounded-xl border border-teal-500/30 bg-teal-500/10 px-5 py-4">
+                <div className="mt-4 rounded-xl border border-teal-500/30 bg-teal-500/10 px-5 py-3">
                   <p className="flex items-center gap-2 font-serif text-xl text-teal-400">
                     <CheckCircle2 className="h-5 w-5" /> Inquiry received!
                   </p>
@@ -255,7 +255,7 @@ export function Checkout() {
                 <button
                   type="submit"
                   disabled={status === 'submitting'}
-                  className="mt-6 flex w-full items-center justify-center gap-2 rounded-full bg-gold-gradient py-4 font-semibold text-espresso-950 shadow-gold transition-transform hover:scale-[1.02] active:scale-100 disabled:cursor-not-allowed disabled:opacity-60"
+                  className="mt-4 flex w-full items-center justify-center gap-2 rounded-full bg-gold-gradient py-3.5 font-semibold text-espresso-950 shadow-gold transition-transform hover:scale-[1.02] active:scale-100 disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   {status === 'submitting' ? (
                     <>
@@ -269,7 +269,7 @@ export function Checkout() {
                 </button>
               )}
 
-              <p className="mt-4 text-center text-xs text-cream-400">
+              <p className="mt-3 text-center text-xs text-cream-400">
                 By submitting, you agree to be contacted regarding your order. No payment is
                 required until availability is confirmed.
               </p>

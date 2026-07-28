@@ -28,8 +28,8 @@ export function Navbar() {
       <header
         className={`fixed inset-x-0 top-0 z-40 transition-all duration-500 ${
           scrolled
-            ? 'bg-espresso-950/85 backdrop-blur-xl border-b border-saffron-500/15 py-3'
-            : 'bg-transparent py-5'
+            ? 'bg-espresso-950/85 backdrop-blur-xl border-b border-saffron-500/15 py-2'
+            : 'bg-transparent py-3.5'
         }`}
       >
         <nav className="mx-auto flex max-w-8xl items-center justify-between px-5 sm:px-8">
@@ -47,7 +47,7 @@ export function Navbar() {
             </span>
           </a>
 
-          <ul className="hidden items-center gap-8 lg:flex">
+          <ul className="hidden items-center gap-5 lg:flex">
             {LINKS.map((l) => (
               <li key={l.href}>
                 <a
@@ -91,13 +91,13 @@ export function Navbar() {
             mobileOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
           }`}
         >
-          <ul className="mx-auto max-w-8xl space-y-1 px-5 pb-5 pt-4 sm:px-8">
+          <ul className="mx-auto max-w-8xl space-y-1 px-5 pb-3.5 pt-3 sm:px-8">
             {LINKS.map((l) => (
               <li key={l.href}>
                 <a
                   href={l.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block rounded-xl border border-saffron-500/10 bg-espresso-900/60 px-5 py-3 font-serif text-lg text-cream-100 transition-colors hover:border-saffron-400/40 hover:text-saffron-300"
+                  className="block rounded-xl border border-saffron-500/10 bg-espresso-900/60 px-5 py-2 font-serif text-lg text-cream-100 transition-colors hover:border-saffron-400/40 hover:text-saffron-300"
                 >
                   {l.label}
                 </a>

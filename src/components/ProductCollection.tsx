@@ -17,19 +17,19 @@ export function ProductCollection({ products, id, eyebrow, title, highlight, int
   const { ref, isVisible } = useReveal();
 
   return (
-    <section id={id} ref={ref} className="relative overflow-hidden py-24 sm:py-32">
+    <section id={id} ref={ref} className="relative overflow-hidden py-16 sm:py-22">
       <div className="absolute inset-0 bg-gradient-to-b from-espresso-900 via-espresso-950 to-espresso-900" />
 
       <div className="relative mx-auto max-w-8xl px-5 sm:px-8">
         <div className={`reveal ${isVisible ? 'is-visible' : ''} mx-auto max-w-3xl text-center`}>
           <p className="text-xs uppercase tracking-[0.32em] text-saffron-400">{eyebrow}</p>
-          <h2 className="mt-4 font-serif text-4xl leading-tight text-cream-50 sm:text-6xl">
+          <h2 className="mt-3 font-serif text-4xl leading-tight text-cream-50 sm:text-6xl">
             {title} <span className="text-gold-gradient">{highlight}</span>
           </h2>
-          <p className="mt-6 text-lg leading-relaxed text-cream-300 text-balance">{intro}</p>
+          <p className="mt-4 text-lg leading-relaxed text-cream-300 text-balance">{intro}</p>
         </div>
 
-        <div className="mt-16 grid gap-7 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-11 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {products.map((product, i) => (
             <ProductCard key={product.id} product={product} delay={i * 100} />
           ))}
@@ -66,14 +66,14 @@ function ProductCard({ product, delay }: { product: Product; delay: number }) {
       </div>
 
       {/* Body */}
-      <div className="flex flex-1 flex-col p-6">
+      <div className="flex flex-1 flex-col p-4">
         <h3 className="font-serif text-2xl leading-tight text-cream-50">{product.name}</h3>
         <p className="mt-1 text-sm font-medium uppercase tracking-wider text-saffron-400/90">
           {product.tagline}
         </p>
-        <p className="mt-3 flex-1 text-sm leading-relaxed text-cream-300">{product.description}</p>
+        <p className="mt-2 flex-1 text-sm leading-relaxed text-cream-300">{product.description}</p>
 
-        <ul className="mt-4 flex flex-wrap gap-x-4 gap-y-1.5">
+        <ul className="mt-3 flex flex-wrap gap-x-4 gap-y-1.5">
           {product.features.map((f) => (
             <li key={f} className="flex items-center gap-1.5 text-xs text-cream-300">
               <Check className="h-3.5 w-3.5 text-saffron-400" strokeWidth={2.5} />
@@ -82,7 +82,7 @@ function ProductCard({ product, delay }: { product: Product; delay: number }) {
           ))}
         </ul>
 
-        <div className="mt-5 flex items-end justify-between border-t border-saffron-500/10 pt-5">
+        <div className="mt-3.5 flex items-end justify-between border-t border-saffron-500/10 pt-3.5">
           <div>
             <p className="text-[10px] uppercase tracking-widest text-cream-400">From {product.origin}</p>
             <p className="font-serif text-3xl text-gold-gradient">

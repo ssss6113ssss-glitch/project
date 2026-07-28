@@ -1,4 +1,4 @@
-import { Award, FlaskConical, Globe2, HandHeart } from 'lucide-react';
+import { Award, FlaskConical, Globe as Globe2, HandHeart } from 'lucide-react';
 import { useReveal } from '@/hooks/useReveal';
 
 const PILLARS = [
@@ -28,29 +28,29 @@ export function Heritage() {
   const { ref, isVisible } = useReveal();
 
   return (
-    <section id="heritage" ref={ref} className="relative overflow-hidden py-24 sm:py-32">
+    <section id="heritage" ref={ref} className="relative overflow-hidden py-16 sm:py-22">
       <div className="absolute inset-0 bg-gradient-to-b from-espresso-950 to-espresso-900" />
       <div className="persian-pattern absolute inset-0 opacity-30" />
 
       <div className="relative mx-auto max-w-8xl px-5 sm:px-8">
         <div className={`reveal ${isVisible ? 'is-visible' : ''} mx-auto max-w-3xl text-center`}>
           <p className="text-xs uppercase tracking-[0.32em] text-saffron-400">Our Heritage</p>
-          <h2 className="mt-4 font-serif text-4xl leading-tight text-cream-50 sm:text-6xl">
+          <h2 className="mt-3 font-serif text-4xl leading-tight text-cream-50 sm:text-6xl">
             A legacy woven in
             <span className="text-gold-gradient"> gold &amp; crimson</span>
           </h2>
-          <p className="mt-6 text-lg leading-relaxed text-cream-300 text-balance">
+          <p className="mt-4 text-lg leading-relaxed text-cream-300 text-balance">
             For over two and a half millennia, Persian artisans have perfected two of the world's
             most coveted treasures — the saffron thread and the knotted rug. Persian Treasures
             brings them directly to you, with the same integrity they were created with.
           </p>
         </div>
 
-        <div className="mt-16 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-11 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {PILLARS.map((p, i) => (
             <article
               key={p.title}
-              className={`reveal ${isVisible ? 'is-visible' : ''} group relative overflow-hidden rounded-2xl border border-saffron-500/15 bg-espresso-800/40 p-7 transition-all duration-500 hover:border-saffron-400/40 hover:bg-espresso-700/40`}
+              className={`reveal ${isVisible ? 'is-visible' : ''} group relative overflow-hidden rounded-2xl border border-saffron-500/15 bg-espresso-800/40 p-5 transition-all duration-500 hover:border-saffron-400/40 hover:bg-espresso-700/40`}
               style={{ transitionDelay: `${i * 90}ms` }}
             >
               <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-saffron-500/5 blur-2xl transition-opacity duration-500 group-hover:bg-saffron-500/15" />
@@ -58,8 +58,8 @@ export function Heritage() {
                 <span className="grid h-12 w-12 place-items-center rounded-xl border border-saffron-500/30 bg-espresso-900/60 text-saffron-300 transition-colors group-hover:border-saffron-400/60 group-hover:text-saffron-200">
                   <p.icon className="h-6 w-6" strokeWidth={1.5} />
                 </span>
-                <h3 className="mt-5 font-serif text-2xl text-cream-50">{p.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-cream-300">{p.text}</p>
+                <h3 className="mt-3.5 font-serif text-2xl text-cream-50">{p.title}</h3>
+                <p className="mt-1.5 text-sm leading-relaxed text-cream-300">{p.text}</p>
               </div>
             </article>
           ))}

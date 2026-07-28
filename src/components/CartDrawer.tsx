@@ -21,7 +21,7 @@ export function CartDrawer() {
         }`}
         aria-hidden={!isOpen}
       >
-        <div className="flex items-center justify-between border-b border-saffron-500/15 px-6 py-5">
+        <div className="flex items-center justify-between border-b border-saffron-500/15 px-6 py-3.5">
           <div className="flex items-center gap-3">
             <ShoppingBag className="h-5 w-5 text-saffron-400" />
             <h2 className="font-serif text-2xl text-cream-50">
@@ -39,7 +39,7 @@ export function CartDrawer() {
         </div>
 
         {items.length === 0 ? (
-          <div className="flex flex-1 flex-col items-center justify-center gap-4 px-6 text-center">
+          <div className="flex flex-1 flex-col items-center justify-center gap-3 px-6 text-center">
             <div className="grid h-20 w-20 place-items-center rounded-full border border-saffron-500/20">
               <ShoppingBag className="h-8 w-8 text-saffron-500/50" />
             </div>
@@ -49,18 +49,18 @@ export function CartDrawer() {
             </p>
             <button
               onClick={close}
-              className="mt-2 rounded-full border border-saffron-500/40 px-6 py-2.5 text-sm font-medium text-saffron-300 transition-colors hover:bg-saffron-500/10"
+              className="mt-1.5 rounded-full border border-saffron-500/40 px-6 py-2.5 text-sm font-medium text-saffron-300 transition-colors hover:bg-saffron-500/10"
             >
               Continue browsing
             </button>
           </div>
         ) : (
           <>
-            <div className="flex-1 space-y-4 overflow-y-auto px-6 py-5">
+            <div className="flex-1 space-y-3 overflow-y-auto px-6 py-3.5">
               {items.map((item) => (
                 <div
                   key={item.product.id}
-                  className="flex gap-4 rounded-2xl border border-saffron-500/10 bg-espresso-800/50 p-4"
+                  className="flex gap-3 rounded-2xl border border-saffron-500/10 bg-espresso-800/50 p-3"
                 >
                   <div className="flex flex-col gap-2 self-center">
                     <button
@@ -82,7 +82,7 @@ export function CartDrawer() {
                   <div className="flex-1">
                     <p className="font-serif text-lg leading-tight text-cream-50">{item.product.name}</p>
                     <p className="text-xs text-cream-400">{item.product.origin}</p>
-                    <p className="mt-2 text-sm text-saffron-300">
+                    <p className="mt-1.5 text-sm text-saffron-300">
                       ${item.product.priceUsd.toLocaleString()}{' '}
                       <span className="text-cream-400">× {item.quantity}</span>
                     </p>
@@ -109,7 +109,7 @@ export function CartDrawer() {
               </button>
             </div>
 
-            <div className="border-t border-saffron-500/15 px-6 py-5">
+            <div className="border-t border-saffron-500/15 px-6 py-3.5">
               <div className="flex items-center justify-between">
                 <span className="text-sm uppercase tracking-widest text-cream-400">Subtotal</span>
                 <span className="font-serif text-3xl text-gold-gradient">
@@ -120,7 +120,7 @@ export function CartDrawer() {
               <a
                 href="#checkout"
                 onClick={close}
-                className="mt-4 block rounded-full bg-gold-gradient py-3.5 text-center font-semibold text-espresso-950 shadow-gold transition-transform hover:scale-[1.02] active:scale-100"
+                className="mt-3 block rounded-full bg-gold-gradient py-3.5 text-center font-semibold text-espresso-950 shadow-gold transition-transform hover:scale-[1.02] active:scale-100"
               >
                 Proceed to Checkout
               </a>
