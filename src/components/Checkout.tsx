@@ -8,8 +8,8 @@ import { TELEGRAM_HANDLE, TELEGRAM_URL } from '@/data/products';
 type Status = 'idle' | 'submitting' | 'success' | 'error';
 
 const USDT_WALLETS = {
-  trc20: 'TJ9x...PersianTreasures...8nQ',
-  erc20: '0x7a3f...PersianTreasures...9c2e',
+  trc20: 'TMTpRWVQHr1Nkj58Em9UmsAqS75xnaGhEN',
+ 
 };
 
 export function Checkout() {
