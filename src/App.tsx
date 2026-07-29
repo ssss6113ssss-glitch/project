@@ -4,6 +4,7 @@ import { CartDrawer } from '@/components/CartDrawer';
 import { Hero } from '@/components/Hero';
 import { Heritage } from '@/components/Heritage';
 import { ProductCollection } from '@/components/ProductCollection';
+import { RugCollection } from '@/components/RugCollection';
 import { Checkout } from '@/components/Checkout';
 import { Contact, Footer } from '@/components/Contact';
 import { PRODUCTS } from '@/data/products';
@@ -11,7 +12,6 @@ import { PRODUCTS } from '@/data/products';
 function App() {
   const saffronProducts = PRODUCTS.filter((p) => p.category === 'saffron');
   const gazProducts = PRODUCTS.filter((p) => p.category === 'confectionery');
-  const rugProducts = PRODUCTS.filter((p) => p.category === 'rugs');
 
   return (
     <CartProvider>
@@ -37,14 +37,7 @@ function App() {
             highlight="Gaz Nougat"
             intro="Traditional pistachio nougat from Bojnourd and Boldaji — soft manna-and-egg-white Gaz studded with premium Akbari pistachios. The beloved sweet of Persian celebrations, now available worldwide."
           />
-          <ProductCollection
-            id="rugs"
-            products={rugProducts}
-            eyebrow="Woven Masterpieces"
-            title="Handmade Persian"
-            highlight="Rugs"
-            intro="Knotted by master weavers in Tabriz, Kashan, and the Zagros mountains. Each rug is a one-of-a-kind heirloom, dyed with nature's pigments and woven over months of devotion."
-          />
+          <RugCollection />
           <Checkout />
           <Contact />
         </main>
