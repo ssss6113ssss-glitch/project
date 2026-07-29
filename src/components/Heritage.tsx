@@ -28,7 +28,7 @@ export function Heritage() {
   const { ref, isVisible } = useReveal();
 
   return (
-    <section id="heritage" ref={ref} className="relative overflow-hidden py-16 sm:py-22">
+    <section id="heritage" ref={ref} className="relative overflow-hidden pt-16 pb-6 sm:pt-22 sm:pb-8">
       <div className="absolute inset-0 bg-gradient-to-b from-espresso-950 to-espresso-900" />
       <div className="persian-pattern absolute inset-0 opacity-30" />
 

@@ -11,13 +11,14 @@ interface Props {
   title: string;
   highlight: string;
   intro: string;
+  compact?: boolean;
 }
 
-export function ProductCollection({ products, id, eyebrow, title, highlight, intro }: Props) {
+export function ProductCollection({ products, id, eyebrow, title, highlight, intro, compact }: Props) {
   const { ref, isVisible } = useReveal();
 
   return (
-    <section id={id} ref={ref} className="relative overflow-hidden py-16 sm:py-22">
+    <section id={id} ref={ref} className={`relative overflow-hidden ${compact ? 'pt-6 pb-16 sm:pt-8 sm:pb-22' : 'py-16 sm:py-22'}`}>
       <div className="absolute inset-0 bg-gradient-to-b from-espresso-900 via-espresso-950 to-espresso-900" />
 
       <div className="relative mx-auto max-w-8xl px-5 sm:px-8">
