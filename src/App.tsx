@@ -28,7 +28,6 @@ function App() {
             title="Premium Iranian"
             highlight="Saffron"
             intro="Hand-harvested Sargol and Pushal saffron from the sun-baked fields of Khorasan — the cradle of the world's finest saffron for over three thousand years."
-            compact
           />
           <ProductCollection
             id="confectionery"
