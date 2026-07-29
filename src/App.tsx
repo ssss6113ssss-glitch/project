@@ -27,7 +27,7 @@ function App() {
             eyebrow="The Golden Spice"
             title="Premium Persian"
             highlight="Saffron"
-            intro="Hand-harvested Sargol and Pushal saffron from the sun-baked fields of Khorasan — the cradle of the world's finest saffron for over three thousand years."
+            intro="Hand-harvested Negin, Sargol, and Pushal saffron from the sun-drenched fields of Khorasan — the historic homeland of the world's finest saffron for more than three millennia."
           />
           <ProductCollection
             id="confectionery"
