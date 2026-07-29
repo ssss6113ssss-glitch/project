@@ -111,11 +111,11 @@ const SAFFRON_TYPES: SaffronType[] = [
     key: 'dast',
     label: 'Dast Saffron',
     character: 'Whole Bunch · Traditional',
-    grade: 'Dast — Grade B',
+    grade: 'Dast — Grade A',
     accent: 'gold',
     typeLead:
-      "Dast, or 'bunch' saffron, keeps the whole strand intact — red stigma, yellow style, and root — exactly as it comes from the flower. The most traditional and economical cut, it offers a mellow, full-bodied flavor ideal for slow-cooked stews, rice, and infusions. Lab-verified Grade B.",
-    typeFeatures: ['Whole strand intact', 'Crocin 180+', 'ISO 3632 Grade B'],
+      "Dast, or 'bunch' saffron, keeps the whole strand intact — red stigma, yellow style, and root — exactly as it comes from the flower. The most traditional and economical cut, it offers a mellow, full-bodied flavor ideal for slow-cooked stews, rice, and infusions. Lab-verified Grade A.",
+    typeFeatures: ['Whole strand intact', 'Crocin 180+', 'ISO 3632 Grade A'],
     prices: { 5: 29, 10: 49, 50: 199, 100: 360 },
   },
 ];
