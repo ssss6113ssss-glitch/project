@@ -70,7 +70,7 @@ function SubCollection({ collection }: { collection: typeof RUG_COLLECTIONS[numb
       <div
         ref={scrollerRef}
         onScroll={updateArrows}
-        className="flex snap-x snap-mandatory gap-5 overflow-x-auto scroll-smooth pb-4 [scrollbar-width:thin] [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-saffron-500/30 [&::-webkit-scrollbar-track]:bg-transparent"
+        className="flex snap-x snap-mandatory gap-5 overflow-x-auto overflow-y-hidden scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
       >
         {collection.rugs.map((rug, i) => (
           <div
