@@ -13,6 +13,15 @@ export function useReveal<T extends HTMLElement = HTMLDivElement>(
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    const rect = el.getBoundingClientRect();
+    const inInitialView =
+      rect.top < window.innerHeight - 60 && rect.bottom > 0;
+    if (inInitialView) {
+      setIsVisible(true);
+      return;
+    }
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
