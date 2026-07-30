@@ -76,7 +76,7 @@ function SubCollection({ collection }: { collection: typeof RUG_COLLECTIONS[numb
           <div
             key={rug.id}
             data-card
-            className="snap-start shrink-0 w-[80vw] sm:w-[calc(50%-0.625rem)] lg:w-[calc(25%-0.9375rem)]"
+            className="snap-start shrink-0 w-[78vw] max-w-[340px] sm:w-[calc(50%-0.625rem)] sm:max-w-none lg:w-[calc(25%-0.9375rem)]"
           >
             <RugCard rug={rug} delay={i * 60} />
           </div>

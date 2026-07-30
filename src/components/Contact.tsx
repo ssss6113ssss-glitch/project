@@ -18,7 +18,7 @@ export function Contact() {
           <h2 className="mt-3 font-serif text-4xl leading-tight text-cream-50 sm:text-6xl">
             Let's start a <span className="text-gold-gradient">conversation</span>
           </h2>
-          <p className="mt-4 text-lg leading-relaxed text-cream-300 text-balance">
+          <p className="mt-4 text-base leading-relaxed text-cream-300 text-balance sm:text-lg">
             Questions about a rug's provenance, a saffron grade, or a bulk order? We reply
             fastest on Telegram. Reach out — we'd love to hear from you.
           </p>

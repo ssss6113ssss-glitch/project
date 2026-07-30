@@ -33,39 +33,39 @@ export function Hero() {
           </span>
         </div>
 
-        <h1 className="animate-fade-up mt-5 max-w-4xl font-serif text-5xl font-semibold leading-[1.05] text-cream-50 text-balance [animation-delay:0.1s] sm:text-7xl lg:text-8xl">
+        <h1 className="animate-fade-up mt-5 max-w-4xl font-serif text-4xl font-semibold leading-[1.08] text-cream-50 text-balance [animation-delay:0.1s] sm:text-7xl lg:text-8xl">
           The Treasures of
           <span className="block text-gold-gradient">Ancient Persia</span>
         </h1>
 
-        <p className="animate-fade-up mt-5 max-w-2xl text-lg leading-relaxed text-cream-300 text-balance [animation-delay:0.2s] sm:text-xl">
+        <p className="animate-fade-up mt-5 max-w-2xl text-base leading-relaxed text-cream-300 text-balance [animation-delay:0.2s] sm:text-xl">
           Premium Iranian saffron, hand-harvested from the Khorasan plateau. Hand-knotted
           Persian rugs woven by master artisans over months of devotion. Delivered worldwide,
           paid in USDT.
         </p>
 
-        <div className="animate-fade-up mt-7 flex flex-col items-center gap-3 [animation-delay:0.3s] sm:flex-row">
+        <div className="animate-fade-up mt-7 flex w-full max-w-md flex-col items-stretch gap-3 [animation-delay:0.3s] sm:max-w-none sm:flex-row sm:items-center">
           <a
             href="#saffron"
-            className="group rounded-full bg-gold-gradient px-8 py-4 font-semibold text-espresso-950 shadow-gold transition-transform hover:scale-105 active:scale-100"
+            className="group rounded-full bg-gold-gradient px-7 py-3.5 text-center font-semibold text-espresso-950 shadow-gold transition-transform hover:scale-105 active:scale-100 sm:px-8 sm:py-4"
           >
             Explore the Collection
             <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">→</span>
           </a>
           <a
             href="#heritage"
-            className="rounded-full border border-saffron-500/40 px-8 py-4 font-medium text-cream-100 transition-colors hover:border-saffron-400/70 hover:bg-saffron-500/10"
+            className="rounded-full border border-saffron-500/40 px-7 py-3.5 text-center font-medium text-cream-100 transition-colors hover:border-saffron-400/70 hover:bg-saffron-500/10 sm:px-8 sm:py-4"
           >
             Our Heritage
           </a>
         </div>
 
         {/* Stats strip */}
-        <div className="animate-fade-up mt-14 grid w-full max-w-3xl grid-cols-2 gap-px overflow-hidden rounded-2xl border border-saffron-500/15 bg-saffron-500/10 sm:grid-cols-4 [animation-delay:0.4s]">
+        <div className="animate-fade-up mt-12 grid w-full max-w-3xl grid-cols-2 gap-px overflow-hidden rounded-2xl border border-saffron-500/15 bg-saffron-500/10 sm:grid-cols-4 sm:mt-14 [animation-delay:0.4s]">
           {STATS.map((s) => (
-            <div key={s.label} className="bg-espresso-900/80 px-4 py-4 text-center backdrop-blur">
-              <p className="font-serif text-3xl text-saffron-300 sm:text-4xl">{s.value}</p>
-              <p className="mt-1 text-[11px] uppercase tracking-widest text-cream-400">{s.label}</p>
+            <div key={s.label} className="bg-espresso-900/80 px-3 py-3 text-center backdrop-blur sm:px-4 sm:py-4">
+              <p className="font-serif text-2xl text-saffron-300 sm:text-4xl">{s.value}</p>
+              <p className="mt-1 text-[10px] uppercase tracking-widest text-cream-400 sm:text-[11px]">{s.label}</p>
             </div>
           ))}
         </div>

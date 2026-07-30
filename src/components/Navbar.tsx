@@ -33,12 +33,12 @@ export function Navbar() {
         }`}
       >
         <nav className="mx-auto flex max-w-8xl items-center justify-between px-5 sm:px-8">
-          <a href="#top" className="group flex items-center gap-3">
-            <span className="grid h-10 w-10 place-items-center rounded-full border border-saffron-500/40 bg-espresso-800/60 transition-transform duration-500 group-hover:rotate-180">
+          <a href="#top" className="group flex min-w-0 items-center gap-2.5 sm:gap-3">
+            <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full border border-saffron-500/40 bg-espresso-800/60 transition-transform duration-500 group-hover:rotate-180">
               <SaffronMark className="h-5 w-5" />
             </span>
-            <span className="flex flex-col leading-none">
-              <span className="font-serif text-xl font-semibold tracking-wide text-cream-50">
+            <span className="flex min-w-0 flex-col leading-none">
+              <span className="truncate font-serif text-lg font-semibold tracking-wide text-cream-50 sm:text-xl">
                 Persian Treasures
               </span>
               <span className="text-[10px] uppercase tracking-[0.32em] text-saffron-400/80">
@@ -61,10 +61,10 @@ export function Navbar() {
             ))}
           </ul>
 
-          <div className="flex items-center gap-3">
+          <div className="flex shrink-0 items-center gap-2 sm:gap-3">
             <button
               onClick={open}
-              className="group relative flex items-center gap-2 rounded-full border border-saffron-500/30 bg-espresso-800/40 px-4 py-2 text-sm font-medium text-cream-100 transition-all hover:border-saffron-400/60 hover:bg-espresso-700/60"
+              className="group relative flex items-center gap-2 rounded-full border border-saffron-500/30 bg-espresso-800/40 px-3 py-2 text-sm font-medium text-cream-100 transition-all hover:border-saffron-400/60 hover:bg-espresso-700/60 sm:px-4"
               aria-label={`Open cart, ${count} items`}
             >
               <ShoppingBag className="h-4 w-4 text-saffron-400" />

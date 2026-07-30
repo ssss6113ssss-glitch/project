@@ -30,7 +30,7 @@ export function ProductCollection({ products, id, eyebrow, title, highlight, int
           <p className="mt-4 text-lg leading-relaxed text-cream-300 text-balance">{intro}</p>
         </div>
 
-        <div className="mt-11 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid gap-4 sm:mt-11 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
           {products.map((product, i) => (
             <ProductCard key={product.id} product={product} delay={i * 100} />
           ))}
